@@ -28,7 +28,7 @@ def derivative(theta,x,y):
     return (d)
 
 
-#taking the training data
+#taking the training data,you can also take them as csv files(which is what ususally done),but this is for beginners
 x=np.array([[1,3,1],[1,8,4],[1,1,2],[1,4,0]])
 y=np.array([-1,4,-3,5])
 theta=np.array([0,0,0])
