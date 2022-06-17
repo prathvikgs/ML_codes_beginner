@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #calculating the cost function J
-
 def cost_func(theta,x,y):
     m=len(y)
     J=0
@@ -15,7 +14,6 @@ def cost_func(theta,x,y):
     return(J)
 
 #derivative terms
-
 def derivative(theta,x,y):
     m=len(y) #no of training examples
     n=len(theta) #no of features
@@ -35,7 +33,6 @@ theta=np.array([0,0,0])
 t=[]
 
 #setting some initial values
-
 m=len(y)                      #no of learning set
 alpha=1e-3                    #learning rate
 theta_ini=np.array([1,0,0])   #initial values
@@ -47,12 +44,9 @@ temp=np.zeros(n)              #temporaru array required
 
 
 #the main loop of gradient descent
-
 for it in range(10000):                             #will perform 10000 iterations, we can also keep some convergence results
     temp=theta_ini-alpha*derivative(theta_ini,x,y)  #storig the value of theta-a*der
-    
-    theta_ini=temp                                  #updating the value
-    
+    theta_ini=temp                                  #updating the value    
     t.append(cost_func(theta_ini,x,y))
     t1.append(theta_ini[0])                         #storing the theta after every iteration
     print(theta_ini)
