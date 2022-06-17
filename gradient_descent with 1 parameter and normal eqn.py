@@ -1,7 +1,7 @@
+# gradient descent for 1 parameter
+
 import numpy as np
 import matplotlib.pyplot as plt
-
-# gradient descent for 1 parameter
 
 # cost funct
 def cost_func(x, y, theta_0, theta_1):
@@ -36,6 +36,8 @@ theta_1 = 0  # initial value
 t = []
 theta = []
 D = derivatives(x, y, theta_0, theta_1)
+
+#the main loop 
 while D[0] ** 2 > 1e-8 and D[1] ** 2 > 1e-8:#setting automatic convergence test
     D = derivatives(x, y, theta_0, theta_1)
     temp0 = theta_0 - alpha * D[0]
@@ -63,12 +65,7 @@ Y=np.array([[-1],[4],[-3],[5]])
 
 THETA=np.dot(np.linalg.inv(np.dot(np.transpose(X),X)),np.dot(np.transpose(X),Y))#values of parameter by analytical method
 
-
-print(THETA)
-
-
-# In[ ]:
-
+print(THETA) #gives the values of the parameters given analytically
 
 
 
