@@ -22,7 +22,7 @@ def derivative(theta,x,y):
     for j in range(m):
         for i in range(n):
             u=np.dot(theta,np.transpose(x[j]))
-            d[i]+=1/n*((u-y[j])*x[j][i])
+            d[i]+=1/m*((u-y[j])*x[j][i])
     return (d)
 
 
